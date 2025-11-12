@@ -1,0 +1,8 @@
+runtime: php84
+entrypoint: serve api/index.php
+
+# Serve images as static resources
+handlers:
+- url: /(.+\.(gif|png|jpg))$
+  static_files: api/\1
+  upload: api/.+\.(gif|png|jpg)$
